@@ -332,6 +332,7 @@ class ProductVariantResource extends BaseResource
             'identifiers' => Pages\ManageVariantIdentifiers::route('/{record}/identifiers'),
             'inventory' => Pages\ManageVariantInventory::route('/{record}/inventory'),
             'shipping' => Pages\ManageVariantShipping::route('/{record}/shipping'),
+            'activities' => Pages\ListActivities::route('/{record}/activity-log'),
         ];
     }
 }

@@ -33,6 +33,10 @@ class EditProduct extends BaseEditRecord
     protected function getDefaultHeaderActions(): array
     {
         return [
+            Actions\Action::make('activity')
+                ->label('Activity Log')
+                ->url(ProductResource::getUrl('activities', ['record' => $this->record]))
+                ->color('gray'),
             Actions\EditAction::make('update_status')
                 ->label(
                     __('lunarpanel::product.actions.edit_status.label')

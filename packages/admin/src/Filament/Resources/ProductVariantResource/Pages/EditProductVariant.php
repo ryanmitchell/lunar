@@ -64,9 +64,16 @@ class EditProductVariant extends BaseEditRecord
 
     protected function getDefaultHeaderActions(): array
     {
+        $record = $this->getRecord();
+
         return [
+            Action::make('activity')
+                ->label('Activity Log')
+                ->url(ProductVariantResource::getUrl('activities', ['record' => $record]))
+                ->color('gray'),
+
             ProductVariantResource::getVariantSwitcherWidget(
-                $this->getRecord()
+                $record
             ),
         ];
     }

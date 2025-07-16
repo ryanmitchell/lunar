@@ -367,6 +367,7 @@ class ProductResource extends BaseResource
             'urls' => Pages\ManageProductUrls::route('/{record}/urls'),
             'collections' => Pages\ManageProductCollections::route('/{record}/collections'),
             'associations' => Pages\ManageProductAssociations::route('/{record}/associations'),
+            'activities' => Pages\ListActivities::route('/{record}/activity-log'),
         ];
     }
 
