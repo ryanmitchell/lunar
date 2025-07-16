@@ -83,9 +83,11 @@ abstract class BaseActivityLog extends ManageRelatedRecords
                         return $indicators;
                     }),
             ])
+            ->recordAction('view')
             ->actions([
                 Tables\Actions\ViewAction::make('view')
-                    ->label('View')
+                    ->hiddenLabel(true)
+                    ->icon(false)
                     ->modal(true)
                     ->form(fn ($form) => ActivityResource::getDefaultForm($form)),
             ])
